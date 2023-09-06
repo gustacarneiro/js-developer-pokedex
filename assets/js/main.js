@@ -5,6 +5,11 @@ const maxRecords = 151
 const limit = 10
 let offset = 0;
 
+function viewDetails(pokeId) {
+    window.location.href = `/details.html?id=${pokeId}`
+}
+
+
 function convertPokemonToLi(pokemon) {
     return `
         <li class="pokemon ${pokemon.type}">
@@ -13,6 +18,7 @@ function convertPokemonToLi(pokemon) {
 
             <div class="detail">
                 <ol class="types">
+                    <li class="details_btn" onClick="viewDetails(${pokemon.number})">details</li>
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
