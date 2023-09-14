@@ -6,7 +6,7 @@ const limit = 10
 let offset = 0;
 
 function viewDetails(pokeId) {
-    window.location.href = `/details.html?id=${pokeId}`
+    window.location.href = `details.html?id=${pokeId}`
 }
 
 
